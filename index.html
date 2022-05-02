@@ -8,6 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"       rel="stylesheet"      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,11 +23,17 @@
                 <li class="menu__item"><button class="menu__btn">Get In Touch</button></li>
             </ul>
         </nav>
+
+        <div class="hamburger active">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
 
     <section class="main">
         <div class="container">
-            <p class="main__subtitle col-md-4 offset-md-4">Lorem ipsum dolor</p>
+            <p class="main__subtitle col-md-4 offset-md-4 col-sm-3 offset-sm-3 col-1 offset-1">Lorem ipsum dolor</p>
             <h1 class="main__title col-md-10 offset-md-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit</h1>
             <button class="main__btn btn col-md-3">Get In Touch</button>
         </div>
@@ -34,39 +41,41 @@
 
     <section class="carousel">
         <div class="container">
-            <div class="cards">
-                <div class="card__item">
-                    <div class="card__title">Name</div>
-                    <p class="card__descr">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. 
-                        Ac aliquam ac volutpat, viverra magna risus. 
-                    </p>
-                    <a href="#" class="card__link">Experienced team</a>
-                </div>
-
-                <div class="card__item">
-                    <div class="card__title h-96">Lorem ipsum dolor sit amet</div>
-                    <p class="card__descr">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing 
-                    </p>
-                    <a href="#" class="card__link">Experienced team</a>
-                </div>
-
-                <div class="card__item">
-                    <div class="card__title">Name</div>
-                    <p class="card__descr">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat. 
-                    </p>
-                    <a href="#" class="card__link">Experienced team</a>
-                </div>
-
-                <div class="card__item">
-                    <div class="card__title">Name</div>
-                    <p class="card__descr">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. 
-                        Ac aliquam ac volutpat, viverra magna risus. 
-                    </p>
-                    <a href="#" class="card__link">Experienced team</a>
+            <div class="row w-100">
+                <div class="cards">
+                    <div class="card__item col-md-3 offset-md-0 col-sm-3 offset-sm-2">
+                        <div class="card__title">Name</div>
+                        <p class="card__descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. 
+                            Ac aliquam ac volutpat, viverra magna risus. 
+                        </p>
+                        <a href="#" class="card__link">Experienced team</a>
+                    </div>
+    
+                    <div class="card__item card__item-2 col-md-3 offset-md-0 col-sm-3 offset-sm-2">
+                        <div class="card__title h-96">Lorem ipsum dolor sit amet</div>
+                        <p class="card__descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing 
+                        </p>
+                        <a href="#" class="card__link">Experienced team</a>
+                    </div>
+    
+                    <div class="card__item card__item-3 col-md-3 offset-md-0 col-sm-3 offset-sm-2">
+                        <div class="card__title">Name</div>
+                        <p class="card__descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat. 
+                        </p>
+                        <a href="#" class="card__link">Experienced team</a>
+                    </div>
+    
+                    <div class="card__item card__item-4 col-md-3 offset-md-0 col-sm-3 offset-sm-2">
+                        <div class="card__title">Name</div>
+                        <p class="card__descr">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. 
+                            Ac aliquam ac volutpat, viverra magna risus. 
+                        </p>
+                        <a href="#" class="card__link">Experienced team</a>
+                    </div>
                 </div>
             </div>
             <div class="switchers">
@@ -87,7 +96,7 @@
     <section class="mountain">
         <div class="container">
             <div class="row w-100">
-                <div class="mountain__wrapper col-md-6">
+                <div class="mountain__wrapper col-lg-6 col-md-5 col-sm-6">
                     <div class="mountain__title title">
                         Lorem ipsum dolor sit amet, consectetur
                     </div>
@@ -98,7 +107,7 @@
                         <a href="#">Experienced team</a>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="mountain__row col-md-6 col-sm-6">
                     <img src="img/mountain.png" alt="mountain" class="mountain__img img">
                 </div>
             </div>
@@ -108,10 +117,10 @@
     <section class="man">
         <div class="container">
             <div class="row w-100 flex-nowrap">
-                <div class="col-md-6">
+                <div class="man__row col-md-5 col-lg-6 col-sm-6">
                     <img src="img/man.png" alt="man" class="man__img img">
                 </div>
-                <div class="man__wrapper col-md-6">
+                <div class="man__wrapper col-md-5 col-lg-6 col-sm-6">
                     <div class="man__title title">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     </div>
@@ -128,38 +137,38 @@
 
     <section class="concept">
         <div class="container">
-            <div class="concept__title title col-md-7">
+            <div class="concept__title title col-lg-7 col-md-6 col-1">
                 Lorem ipsum dolor sit amet,
                 consectetur adipiscing
             </div>
-            <div class="concept__descr descr col-md-7">
+            <div class="concept__descr descr col-lg-7 col-md-6 col-1">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
-            <div class="concept__wrapper row w-100 flex-nowrap">
+            <div class="concept__wrapper row w-100">
 
-                <div class="concept__box col-md-6">
+                <div class="concept__box col-lg-4 col-md-5 col-sm-8">
                     <div class="concept__row row w-100">
                         <img src="icons/gear.svg" alt="gear" class="concept__img col-md-1">
-                        <div class="concept__text-title col-md-5 offset-md-1">
+                        <div class="concept__text-title col-md-4 offset-md-1 col-sm-8">
                             Design concept
                         </div>
                     </div>
                     <div class="row w-100">
-                        <div class="concept__text-descr text-descr col-md-6">
+                        <div class="concept__text-descr text-descr col-md-6 col-sm-8">
                             Vitae nulla nunc euismod vel nunc euismod velpretium tellus accumsan nulla nunc euismod ve semper. 
                         </div>
                     </div>
                 </div>
 
-                <div class="concept__box concept__box-2 col-md-6">
+                <div class="concept__box concept__box-2 col-lg-4 col-md-5 col-sm-8">
                     <div class="concept__row row w-100">
                         <img src="icons/watch.svg" alt="watch" class="concept__img col-md-1">
-                        <div class="concept__text-title w-552 col-md-5 offset-md-1">
+                        <div class="concept__text-title w-552 col-md-4 offset-md-1 col-sm-8">
                             Developing websites
                         </div>
                     </div>
                     <div class="row w-100">
-                        <div class="concept__text-descr text-descr h-217 col-md-6">
+                        <div class="concept__text-descr text-descr h-217 col-md-5 col-lg-6  col-sm-8">
                             Vitae nulla euismod velpretium tellus accumsan nulla nunc euismod ve semper. Vitae nulla euismod velpretium tellus accumsan nulla nunc euismod ve semper. Vitae nulla euismod velpretium tellus accumsan nulla nunc euismod ve semper. 
                         </div>
                     </div>
@@ -172,8 +181,8 @@
     <section class="dark">
         <div class="container">
             <div class="row w-100 justify-content-between">
-                <div class="col-md-5 offset-md-1 dark__title">Lorem ipsum dolor sit amet</div>
-                <button class="dark__btn btn col-md-3 offset-md-2">Get In Touch</button>
+                <div class="col-md-5 offset-md-1 col-sm-8 offset-sm-2 dark__title">Lorem ipsum dolor sit amet</div>
+                <button class="dark__btn btn col-lg-3 offset-lg-1 col-md-3 col-sm-3 offset-sm-3">Get In Touch</button>
             </div>
             <div class="dark__text-descr text-descr col-md-6 offset-md-1">
                 Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa.
@@ -183,15 +192,15 @@
 
     <section class="audit">
         <div class="container">
-            <div class="row w-100">
-                <div class="audit__title title col-md-9">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
-                <div class="audit__link link col-md-3">
+            <div class="audit__row-1 row w-100 flex-nowrap">
+                <div class="audit__title title col-md-9 offset-md-0 col-sm-5 offset-sm-2 col-1 offset-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</div>
+                <div class="audit__link link col-md-3 offset-md-1 col-sm-5 offset-sm-2">
                     <a href="#">Experienced team</a>
                     <img class="audit__img" src="icons/Arrow.svg" alt="arrow">
                 </div>
             </div>
-            <div class="audit__cards row w-100 flex-nowrap">
-                <div class="audit__card col-md-4">
+            <div class="audit__cards row w-100">
+                <div class="audit__card col-lg-4 offset-lg-0 col-md-3 offset-md-0 col-sm-5 offset-sm-2 col-1 offset-1">
                     <div class="audit__card-header">
                         <div class="audit__card-title">Audit</div>
                         <div class="audit__card-descr">
@@ -206,7 +215,7 @@
                     </div>
                 </div>
 
-                <div class="audit__card col-md-4">
+                <div class="audit__card col-lg-4 offset-lg-0 col-md-3 offset-md-0 col-sm-5 offset-sm-2 offset-1">
                     <div class="audit__card-header">
                         <div class="audit__card-title">Lorem ipsum dolor sit amet</div>
                         <div class="audit__card-descr">
@@ -220,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="audit__card col-md-4">
+                <div class="audit__card col-lg-4 offset-lg-0 col-md-3 offset-md-0 col-sm-5 offset-sm-2 offset-1">
                     <div class="audit__card-header">
                         <div class="audit__card-title">Lorem ipsum amet</div>
                         <div class="audit__card-descr">
@@ -239,10 +248,10 @@
 
     <section class="woman">
         <div class="container">
-            <div class="woman__title title col-md-6 offset-md-3">
+            <div class="woman__title title col-lg-8 offset-lg-2 col-md-6 offset-md-3 col-sm-5 offset-sm-2 offset-1">
                 Lorem ipsum dolor sit amet, consectetur
             </div>
-            <div class="woman__descr descr col-md-6 offset-md-3">
+            <div class="woman__descr descr col-lg-8 offset-lg-2 col-md-6 offset-md-3 col-sm-11 offset-sm-1 offset-1">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
             <div class="woman__img col-md-12">
@@ -254,19 +263,19 @@
     <section class="gallery">
         <div class="container">
             <div class="gallery__imgs row w-100">
-                <div class="gallery__img-1 col-md-4">
+                <div class="gallery__img-1 col-lg-3 offset-lg-0 col-md-3 offset-md-0 col-sm-4 offset-sm-1">
                     <img src="img/pic1.png" alt="friends">
                 </div>
-                <div class="gallery__img-2 col-md-3">
+                <div class="gallery__img-2 col-lg-3 col-md-2">
                     <img src="img/pic2.png" alt="friends">
                 </div>
-                <div class="gallery__img-3 col-md-3">
+                <div class="gallery__img-3 col-lg-3 col-md-2">
                     <img src="img/pic3.png" alt="friends">
                 </div>
-                <div class="gallery__title title col-md-5">
+                <div class="gallery__title title col-lg-5 col-md-4 offset-md-0 col-sm-4 offset-sm-1 offset-1">
                     Lorem ipsum dolor
                 </div>
-                <div class="gallery__descr descr col-md-7">
+                <div class="gallery__descr descr col-md-7 offset-md-0 col-sm-5 offset-sm-1 offset-1">
                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
             </div>
@@ -279,14 +288,14 @@
                 <div class="col-md-4 watch__img">
                     <img src="img/pic4.png" alt="drops">
                 </div>
-                <div class="col-md-8 watch__wrapper">
-                    <div class="watch__title title col-md-6 offset-md-1">
+                <div class="col-md-8 col-sm-6 watch__wrapper">
+                    <div class="watch__title title col-md-6">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     </div>
-                    <div class="watch__descr descr offset-md-1">
+                    <div class="watch__descr descr col-md-6">
                         Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. 
                     </div>
-                    <div class="watch__img-2">
+                    <div class="watch__img-2 col-sm-12 col">
                         <img src="img/pic5.png" alt="apple-watch">
                     </div>
                 </div>
@@ -298,13 +307,13 @@
         <div class="container">
             <div class="row w-100">
                 <div class="sea__wrapper col-md-7">
-                    <div class="sea__title title">
+                    <div class="sea__title title offset-1">
                         Lorem ipsum dolor
                     </div>
-                    <div class="sea__descr descr">
+                    <div class="sea__descr descr offset-1">
                         Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat. Convallis turpis erat tempus, viverra aliquet. Nullam viverra nam auctor sit ipsum malesuada a, duis volutpat.  
                     </div>
-                    <div class="sea__img">
+                    <div class="sea__img offset-1">
                         <img src="img/pic6.png" alt="girl">
                     </div>
                 </div>
@@ -318,15 +327,15 @@
     <section class="feedback">
         <div class="container">
             <div class="row w-100">
-                <div class="feedback__text col-md-8 offset-md-2">
+                <div class="feedback__text col-md-8 offset-md-2 offset-1">
                     “Every single person comes away and says - wow that's a really slick experience, that was so easy to use. I feel so much less stressed as I now know we’re doing everything by the book”
                 </div>
             </div>
             <div class="feedback__feed row w-100">
-                <div class="feedback__img col-md-1 offset-md-2">
+                <div class="feedback__img col-md-1 offset-md-2 col-sm-1 col-2 offset-1">
                     <img src="img/ava.png" alt="ava">
                 </div>
-                <div class="feedback__wrapper col-md-2">
+                <div class="feedback__wrapper col-md-2 col-sm-2 col-3">
                     <div class="feedback__name name">
                         Andry Ford
                     </div>
@@ -360,55 +369,53 @@
 
     <section class="lead">
         <div class="container">
-            <div class="lead__title title col-md-4 offset-md-4">Our leadership</div>
-            <div class="lead__descr descr col-md-9 offset-md-2">
+            <div class="lead__title title col-md-4 offset-md-4 col-sm-4 offset-sm-3 offset-1">Our leadership</div>
+            <div class="lead__descr descr col-md-9 offset-md-2 col-sm-6 offset-sm-3 offset-1">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </div>
             <div class="lead__imgs row w-100">
                 <div class="lead__img col-md-3">
                     <img src="img/lead1.png" alt="lead-1">
+                    <div class="lead__wrapper col-md-3 col-sm-4">
+                        <div class="lead__name name">
+                            Andry Ford
+                        </div>
+                        <div class="lead__pos pos">
+                            CEO at Whatever
+                        </div>
+                    </div>
                 </div>
                 <div class="lead__img col-md-3">
                     <img src="img/lead2.png" alt="lead-2">
+                    <div class="lead__wrapper col-md-3 col-sm-4">
+                        <div class="lead__name name">
+                            Andry Ford
+                        </div>
+                        <div class="lead__pos pos">
+                            CEO at Whatever
+                        </div>
+                    </div>
                 </div>
                 <div class="lead__img col-md-3">
                     <img src="img/lead3.png" alt="lead-3">
+                    <div class="lead__wrapper col-md-3 col-sm-4">
+                        <div class="lead__name name">
+                            Andry Ford
+                        </div>
+                        <div class="lead__pos pos">
+                            CEO at Whatever
+                        </div>
+                    </div>
                 </div>
                 <div class="lead__img col-md-3">
                     <img src="img/lead4.png" alt="lead-4">
-                </div>
-            </div>
-            <div class="lead__text row w-100">
-                <div class="lead__wrapper col-md-3">
-                    <div class="lead__name name">
-                        Andry Ford
-                    </div>
-                    <div class="lead__pos pos">
-                        CEO at Whatever
-                    </div>
-                </div>
-                <div class="lead__wrapper col-md-3">
-                    <div class="lead__name name">
-                        Andry Ford
-                    </div>
-                    <div class="lead__pos pos">
-                        CEO at Whatever
-                    </div>
-                </div>
-                <div class="lead__wrapper col-md-3">
-                    <div class="lead__name name">
-                        Andry Ford
-                    </div>
-                    <div class="lead__pos pos">
-                        CEO at Whatever
-                    </div>
-                </div>
-                <div class="lead__wrapper col-md-3">
-                    <div class="lead__name name">
-                        Andry Ford
-                    </div>
-                    <div class="lead__pos pos">
-                        CEO at Whatever
+                    <div class="lead__wrapper col-md-3 col-sm-4">
+                        <div class="lead__name name">
+                            Andry Ford
+                        </div>
+                        <div class="lead__pos pos">
+                            CEO at Whatever
+                        </div>
                     </div>
                 </div>
             </div>
@@ -418,10 +425,10 @@
     <section class="prefooter">
         <div class="container-fluid">
             <div class="row w-100">
-                <div class="prefooter__img col">
+                <div class="prefooter__img col-md">
                     <img src="img/bg-footer.png" alt="google">
                 </div>
-                <div class="prefooter__wrapper col">
+                <div class="prefooter__wrapper col-md col-sm-12">
                     <div class="prefooter__title title">
                         Lorem ipsum dolor sit amet elit, sed do eiusmod 
                     </div>
@@ -433,11 +440,11 @@
 
     <footer class="footer">
         <div class="container">
-            <div class="footer__row row w-100">
-                <div class="footer__sign col-md-3">
+            <div class="footer__row row justify-content-between flex-wrap">
+                <div class="footer__sign col-lg-3 col-md-4 col-sm-4 col">
                     © 2019-2021 All Rights Reserved.
                 </div>
-                <div class="footer__text col-md-2 offset-md-7">
+                <div class="footer__text col-md-2 offset-md-7 col-sm-2 col-1 offset-1">
                     Terms of Service
                 </div>
             </div>

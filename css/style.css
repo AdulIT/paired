@@ -1,4 +1,5 @@
 @import './fonts.css';
+@import './media.css';
 *,
 *::after,
 *::before {
@@ -39,7 +40,7 @@ a {
 }
 .menu {
     width: 595px;
-    height: 41px;
+    min-height: 41px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,9 +66,31 @@ a {
     letter-spacing: -0.03em;
     cursor: pointer;
 }
+.active {
+    display: block;
+}
+.hamburger {
+    display: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    background-color: inherit;
+    cursor: pointer;
+}
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #D1DCE5;
+}
+
 .main {
     padding-top: 163px;
-    height: 871px;
+    min-height: 871px;
     background-color: #23242A;
     color: #fff;
     text-align: center;
@@ -108,7 +131,7 @@ a {
 }
 .carousel {
     position: relative;
-    height: 561px;
+    min-height: 561px;
     top: -73px;
 }
 .carousel .cards {
@@ -119,12 +142,14 @@ a {
     align-items: center;
 }
 .carousel .cards .card__item {
-    padding: 51px 74px 0 47px;
-    width: 440px;
-    height: 425px;
+    padding: 30px 35px 10px 30px;
+    /* padding: 51px 74px 0 47px; */
+    width: 390px;
+    height: 400px;
     background: #FFFFFF;
     box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.1);
     border-radius: 12px;
+    margin-right: 30px;
 }
 .carousel .cards .card__title {
     width: 350px;
@@ -157,7 +182,7 @@ a {
 }
 .switchers {
     margin-top: 40px;
-    width: 122px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
 }
@@ -170,7 +195,7 @@ a {
 }
 .mountain {
     position: relative;
-    height: 675px;
+    min-height: 675px;
 }
 /* .mountain__wrapper {
     margin-right: 61px;
@@ -185,8 +210,6 @@ a {
 .img {
     align-self: start;
     display: block;
-    width: 675px;
-    height: 675px;
     border: 1px solid inherit;
     -moz-border-radius: 12px;
 	-webkit-border-radius: 12px;	
@@ -228,7 +251,7 @@ img {
 
 .man {
     margin-top: 140px;
-    height: 675px;
+    min-height: 675px;
 }
 .man__wrapper {
     margin-left: 103px;
@@ -239,7 +262,6 @@ img {
 }
 .man__descr {
     margin-top: 44px;
-    height: 170px;
 }
 .man__link {
     margin-top: 32px;
@@ -247,28 +269,25 @@ img {
 .col-md-6 {
     padding: 0;
 }
-
 .concept {
     margin-top: 290px;
-    height: 650px;
+    min-height: 650px;
 }
 .concept__title {
     height: 140px;
 }
 .concept__descr {
     width: 728px;
-    height: 136px;
     margin-top: 42px;
 }
 .concept__wrapper {
     margin-top: 64px;
 }
 .concept__wrapper .row {
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
 }
 .concept__box {
     display: flex;
-    height: 203px;
     width: 683px;
     flex-direction: column;
 }
@@ -303,11 +322,7 @@ img {
     letter-spacing: -0.02em;
 }
 .concept__text-descr {
-    height: 93px;
     margin: 16px 0 0 117px;
-}
-.concept__text-descr.h-217 {
-    height: 150px;
     width: 552px;
 }
 .concept__text-title.w-552 {
@@ -319,7 +334,7 @@ img {
 
 .dark {
     margin-top: 256px;
-    height: 371px;
+    min-height: 371px;
     background: url('../img/dark.jpg') center center / 1380px 371px no-repeat;
     padding: 114px 117px 122px 0;
 }
@@ -337,16 +352,16 @@ img {
 .dark__text-descr {
     margin-top: 24px;
     color: #fff;
-    height: 62px;
+    /* height: 62px; */
 }
 
 .audit {
     margin-top: 277px;
-   height: 681px; 
+    min-height: 681px; 
 }
-.audit__title {
+/* .audit__title {
     height: 132px;
-}
+} */
 .audit__img {
     width: 12px;
     height: 22px;
@@ -360,8 +375,11 @@ img {
 .audit__cards {
     margin-top: 70px;
 }
+.audit__cards .row  {
+    flex-wrap: nowrap;
+}
 .audit__card {
-    margin-right: 32px;
+    margin-right: 0px;
 }
 .audit__card-header {
     padding: 50px 35px 65px 35px;
@@ -406,6 +424,7 @@ img {
 }
 
 .woman {
+    min-height: 840px;
     margin-top: 289px;
 }
 .woman__descr {
@@ -416,16 +435,14 @@ img {
 }
 
 .gallery {
-    height: 961px;
+    position: relative;
+    min-height: 961px;
     margin-top: 251px;
 }
 .gallery img {
     -moz-border-radius: 12px;
 	-webkit-border-radius: 12px;	
     border-radius: 12px;
-}
-.gallery__imgs {
-    position: relative;
 }
 .gallery__img-1 {
     margin-top: 62px;
@@ -443,22 +460,24 @@ img {
     margin-top: 122px;
 }
 .gallery__title {
+    margin-top: 126px;
     position: absolute;
-    bottom: 286px;
+    bottom: 253px;
 }
 .gallery__descr {
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
 }
 
 .watch {
-    height: 976px;
+    min-height: 976px;
     margin-top: 266px;
 }
 .watch__img {
     margin-top: 123px;
 }
 .watch__title {
+    margin-left: 70px;
     width: 740px;
 }
 .watch__descr {
@@ -471,7 +490,7 @@ img {
 }
 
 .sea {
-    height: 1008px;
+    min-height: 1008px;
     margin-top: 318px;
 }
 .sea__descr {
@@ -482,7 +501,7 @@ img {
 }
 
 .feedback {
-    height: 325px;
+    min-height: 325px;
     margin-top: 333px;
 }
 .feedback__text {
@@ -508,7 +527,7 @@ img {
 }
 
 .hand {
-    height: 948px;
+    min-height: 948px;
     margin-top: 360px;
     background: url('../img/Body.jpg') center center/cover no-repeat;
 }
@@ -548,7 +567,7 @@ img {
 }
 
 .lead {
-    height: 839px;
+    min-height: 839px;
     margin-top: 262px;
 }
 .lead__descr {
@@ -562,6 +581,14 @@ img {
 .lead__wrapper {
     margin-top: 47px;
     text-align: center;
+}
+.lead__name {
+    width: 150px;
+    margin-left: 85px;
+}
+.lead__pos {
+    width: 180px;
+    margin-left: 72px;
 }
 
 .prefooter {
@@ -585,7 +612,7 @@ img {
 
 .footer {
     height: 168px;
-    border: 1px solid rgba(35,36,42, .2);
+    border-top: 1px solid rgba(35,36,42, .2);
 }
 .footer__row {
     margin-top: 56px;
@@ -596,4 +623,664 @@ img {
 }
 .footer__sign {
     opacity: .5;
+}
+
+
+
+@media (max-width: 1502px) {
+    .mountain__img {
+        margin-left: 30px;
+    }
+    .prefooter__title {
+        margin-top: 120px;
+    }
+    .concept__wrapper .row {
+        flex-wrap: nowrap !important;
+    }
+    .card__item-4 {
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    body {
+        overflow-x: hidden;
+    }
+    .concept__wrapper .row {
+        flex-wrap: nowrap !important;
+    }
+    .card__item {
+        margin-right: 18px;
+    }
+    .mountain__title {
+        margin-top: 100px;
+    }
+    .mountain__descr {
+        width: 550px;
+    }
+    .mountain__img {
+        margin-left: 0;
+    }
+    .man__wrapper {
+        margin-left: 50px;
+    }
+    .man__title {
+        margin-top: 50px;
+    }
+    .man__descr {
+        width: 550px;
+    }
+    .concept {
+        margin-top: 200px;
+    }
+    .concept__text-title {
+        width: 236px;
+    }
+    .concept__text-descr.h-217 {
+        width: 460px;
+    }
+    .concept__box {
+        width: 615px;
+    }
+    .dark {
+        margin-top: 200px;
+        padding-top: 95px;
+        background: url(../img/dark.jpg) center center / 1220px 371px no-repeat;
+    }
+    .gallery__img-1,.gallery__img-2 {
+        margin-right: 30px;
+    }
+    .gallery__title {
+        bottom: 260px;
+    }
+    .title {
+        font-size: 48px;
+    }
+    .descr {
+        font-size: 24px;
+    }
+    .audit__card-header {
+        width: 370px;
+        height: 380px;
+    }
+    .audit__card-footer {
+        width: 370px;
+    }
+    .watch__title, .watch__descr {
+        width: 700px;
+        margin-left: 30px;
+    }
+    .feedback {
+        margin-top: 200px;
+    }
+    .feedback__pos {
+        width: 180px;
+    }
+    .hand__line {
+        width: 560px;
+    }
+    .lead__imgs {
+        margin-top: 100px;
+    }
+    .prefooter__title {
+        width: 600px;
+        margin-top: 100px;
+        font-size: 64px;
+    }
+    .prefooter__btn {
+        margin-top: 68px;
+    }
+    .footer__sign {
+        width: 303px;
+    }
+}
+
+@media (max-width: 1360px) {
+    .carousel .cards .card__item {
+        width: 360px;
+        height: 360px;
+    }
+    .carousel .cards .card__title {
+        width: 300px;
+        font-size: 38px;
+    }
+    .carousel .cards .card__descr, .carousel .cards .card__link {
+        font-size: 20px;
+    }
+    .sea, .watch {
+        margin-top: 200px;
+    }
+    .audit__link {
+        margin: 0;
+    }
+    .audit__card-header {
+        height: 350px;
+    }
+    .audit__card-footer {
+        padding: 25px 0 28px 34px;
+        height: 70px;
+    }
+    .audit__card-link {
+        font-size: 20px;
+    }
+    .audit__card-title {
+        width: 272px;
+        font-size: 40px;
+    }
+    .audit__card-descr {
+        width: 310px;
+        font-size: 20px;
+    }
+    .prefooter__title {
+        width: 568px;
+        font-size: 60px;
+    }
+    .gallery__title {
+        margin-top: 12px;
+    }
+}
+@media (max-width: 1200px) {
+    .main .main__subtitle {
+        font-size: 25px;
+    }
+    .main .main__title {
+        font-size: 80px;
+        line-height: 100%;
+    }
+    .carousel .cards .card__item {
+        width: 340px;
+        height: 340px;
+    }
+    .carousel .cards .card__title {
+        width: 270px;
+        font-size: 35px;
+        margin-bottom: 25px;
+    }
+    .card__item-3 {
+        display: none;
+    }
+    .title {
+        font-size: 42px;
+    }
+    .descr {
+        font-size: 22px;
+    }
+    .mountain__descr {
+        width: 445px;
+    }
+    .man, .concept {
+        margin-top: 20px;
+    }
+    .man__title {
+        margin-top: 25px;
+    }
+    .man__descr {
+        width: 430px;
+    }
+    .concept {
+        margin-top: 90px;
+    }
+    .concept__descr {
+        margin-top: 10px;
+    }
+    .concept__wrapper {
+        margin-top: 36px;
+    }
+    .concept__wrapper.row {
+        width: 50% !important;
+    }
+    .concept__text-title {
+        margin-left: 15px;
+    }
+    .concept__text-descr {
+        margin: 16px 0 0 100px;
+    }
+    .text-descr {
+        font-size: 22px;
+    }
+    .dark {
+        margin-top: 60px;
+        background: url(../img/dark.jpg) center center / 1040px 350px no-repeat;
+    }
+    .dark__btn {
+        margin: 0;
+    }
+    .dark__title {
+        font-size: 42px;
+    }
+    .btn {
+        width: 240px;
+        height: 66px;
+        font-size: 28px;
+    }
+    .audit {
+        margin-top: 170px;
+    }
+    .audit__cards.row {
+        flex-wrap: wrap !important;
+    }
+    .audit__card {
+        margin-right: 32px;
+    }
+    .audit__card-header {
+        width: 325px;
+        height: 330px;
+        padding: 35px 12px 51px 25px;
+        margin-top: 45px;
+    }
+    .audit__card-descr {
+        width: 270px;
+    }
+    .audit__card-footer {
+        width: 325px;
+        padding: 10px 0 10px 25px;
+        height: 50px;
+    }
+    .woman {
+        margin-top: 150px;
+    }
+    .gallery {
+        margin-top: 100px;
+    }
+    .gallery__img-3 {
+        position: absolute;
+        margin-top: 0;
+        right: 20%;
+        top: 55%;
+    }
+    .gallery__title {
+        top: 55%;
+    }
+    .gallery__descr {
+        top: 60%;
+        width: 500px;
+    }
+    .watch {
+        min-height: 700px;
+    }
+    .watch__img {
+        margin-top: 50px;
+    }
+    .watch__title, .watch__descr {
+        width: 600px;
+        margin-left: 20px;
+    }
+    .watch__descr {
+        margin-top: 35px;
+    }
+    .watch__img-2 {
+        margin-top: 45px;
+    }
+    .sea {
+        min-height: 738px;
+        margin-top: 90px;
+    }
+    .feedback__text {
+        font-size: 36px;
+    }
+    .name {
+        width: 153px;
+        font-size: 28px;
+    }
+    .pos {
+        font-size: 23px;
+    }
+    .hand {
+        margin-top: 200px;
+    }
+    .lead {
+        min-height: 620px;
+        margin-top: 200px;
+    }
+    .lead__descr {
+        margin: 30px 0 0 0;
+    }
+    .prefooter {
+        margin-top: 190px;
+    }
+    .footer__text {
+        width: 165px;
+    }
+    .switchers {
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    body {
+        overflow-x: hidden;
+    }
+    .menu {
+        display: none;
+    }
+    .active {
+        display: block;
+    }
+    .switchers {
+        margin-left: 118px;
+    }
+    .pos {
+        font-size: 20px;
+        width: 153px;
+    }
+    .main {
+        min-height: 667px;
+        padding-top: 110px;
+    }
+    .main .main__subtitle {
+        font-size: 22px;
+        width: 276px;
+        letter-spacing: 0.10em;
+    }
+    .main .main__title {
+        font-size: 64px;
+        line-height: 95%;
+        letter-spacing: -0.040em;
+    }
+    .card__item-3, .card__item-4 {
+        display: none;
+    }
+    .title {
+        font-size: 40px;
+        line-height: 100%;
+    }
+    .mountain {
+        min-height: 465px;
+    }
+    .mountain__title {
+        margin-top: 20px;
+        width: 230px;
+    }
+    .mountain__descr {
+        margin-top: 10px;
+        width: 280px;
+    }
+    .man {
+        min-height: 420px;
+        margin-top: 80px;
+    }
+    .man__wrapper {
+        margin-left: 20px;
+    }
+    .man__title {
+        width: 350px;
+    }
+    .man__descr {
+        margin-top: 20px;
+        width: 330px;
+    }
+    .concept {
+        min-height: 610px;
+    }
+    .concept__title {
+        width: 370px;
+    }
+    .concept__box-2 {
+        margin-top: 50px;
+    }
+    .concept__descr {
+        width: 550px;
+    }
+    .concept__text-descr {
+        width: 300px;
+    }
+    .audit__cards.row {
+        flex-wrap: wrap !important;
+    }
+    .audit__card {
+        margin-right: 180px;
+    }
+    .dark {
+        margin-top: 150px;
+        background: url(../img/dark.jpg) center center / 710px 300px no-repeat;
+    }
+    .dark__title {
+        font-size: 40px;
+    }
+    .btn {
+        width: 200px;
+        height: 50px;
+        font-size: 22px;
+    }
+    .dark__btn {
+        margin: 10px 0 0 70px;
+    }
+    .dark__text-descr {
+        width: 470px;
+    }
+    .audit__title {
+        width: 500px;
+    }
+    .audit__link {
+        width: 215px;
+    }
+    .audit__cards {
+        margin-top: 20px;
+    }
+    .woman__title {
+        width: 470px;
+    }
+    .woman__descr {
+        margin-top: 20px;
+    }
+    .gallery {
+        margin-top: 0;
+    }
+    .gallery__img-2,.gallery__img-3 {
+        display: none;
+    }
+    .gallery__title {
+        width: 355px;
+    }
+    .watch {
+        min-height: 565px;
+        margin-top: 35px;
+    }
+    .watch__img {
+        display: none;
+    }
+    .watch__img-2 img {
+        display: block;
+    }
+    .watch__img-2 {
+        margin: 45px auto 0 50px;
+    }
+    .sea {
+        min-height: 600px;
+    }
+    .feedback {
+        margin-top: 150px;
+    }
+    .hand {
+        min-height: 948px;
+    }
+    .hand__line {
+        width: 50%;
+    }
+    .lead {
+        min-height: 480px;
+    }
+    .lead__title {
+        width: 256px;
+    }
+    .lead__descr {
+        width: 700px;
+    }
+    .lead__imgs {
+        margin-top: 60px;
+    }
+    .lead__name, .lead__pos {
+        margin-left: 0;
+    }
+    .name {
+        font-size: 26px;
+    }
+    .pos {
+        font-size: 20px;
+    }
+    .lead__wrapper {
+        margin-top: 25px;
+    }
+    .prefooter {
+        margin-top: 130px;
+        background: url('../img/bg-footer.png') center center/cover no-repeat;
+    }
+    .prefooter__img {
+        display: none;
+    }
+    .prefooter__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .prefooter__title {
+        color: #fff;
+    }
+    .footer {
+        height: 100px;
+    }
+    .footer__row {
+        width: 700px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media(max-width: 767px) {
+    .main .main__title {
+        font-size: 52px;
+    }
+    .main {
+        min-height: 560px;
+    }
+    .switchers {
+        margin-left: 90px;
+    }
+    .card__item-2, .card__item-3, .card__item-4 {
+        display: none;
+    }
+    .mountain__title {
+        margin: 0;
+    }
+    .mountain__descr {
+        width: 240px;
+    }
+    .man__wrapper {
+        margin-left: 10px;
+    }
+    .man__title {
+        width: 260px;
+    }
+    .man__descr {
+        width: 230px;
+    }
+    .watch__title, .watch__descr {
+        width: 480px;
+    }
+    .dark {
+        margin-top: 200px;
+        min-height: 300px;
+        background: url(../img/dark.jpg) center center / 615px 300px no-repeat;
+    }
+    .dark__title, .dark__text-descr {
+        margin-left: 60px;
+    }
+    .audit__card {
+        margin-right: 0;
+    }
+    .audit__row-1.row {
+        flex-wrap: wrap !important;
+    }
+    .audit__link {
+        margin-left: 90px;
+    }
+    .sea__img-1 {
+        display: none;
+    }
+    .lead__descr {
+        width: 480px;
+    }
+    .footer__row {
+        width: 540px;
+    }
+    .lead__img {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main {
+        height: 650px;
+    }
+    .main .main__title {
+        font-size: 50px;
+        width: 300px;
+    }
+    .carousel .cards .card__item {
+        width: 300px;
+        height: 300px;
+    }
+    .man__row, .mountain__row {
+        display: none;
+    }
+    .concept__descr {
+        width: 360px;
+    }
+    .dark__title, .dark__text-descr {
+        margin-left: 25px;
+    }
+    .concept__img {
+        margin-left: 60px;
+    }
+    .man__wrapper {
+        margin-left: 40px;
+    }
+    .audit__title {
+        width: 380px;
+    }
+    .woman {
+        min-height: 605px;
+    }
+    .woman__title, .woman__descr, .gallery__descr, .watch__title, .watch__descr, .lead__descr, .prefooter__title {
+        width: 270px;
+    }
+    .concept__title, .concept__descr {
+        width: 300px;
+    }
+    .feedback__text {
+        width: 350px;
+        font-size: 28px;
+    }
+    .title {
+        width: 300px;
+        font-size: 36px;
+    }
+    .gallery__title, .gallery__descr {
+        margin-top: 0;
+        position: relative;
+    }
+    .gallery__title {
+        margin-top: 123px;
+    }
+    .audit__card-header {
+        width: 300px;
+        height: 300px;
+    }
+    .audit__card-descr {
+        width: 230px;
+    }
+    .audit__card-footer {
+        width: 300px;
+    }
+    .man__wrapper {
+        margin-left: 0px;
+    }
+    .footer__text {
+        display: none;
+    }
+    .feedback__text {
+        width: 300px;
+    }
 }
